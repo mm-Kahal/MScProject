@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/run/media/alpha0/58C843676AE891FF/University/4th Year (MSc)/Msc 2020/COMP5200M MSc Project/API/venv01/bin/python3.7" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from celery.__main__ import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
